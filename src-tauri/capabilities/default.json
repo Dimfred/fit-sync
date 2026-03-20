@@ -1,0 +1,35 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "enables the default permissions",
+  "windows": [
+    "main",
+    "garmin-auth"
+  ],
+  "permissions": [
+    "core:default",
+    "core:window:allow-create",
+    "core:window:allow-close",
+    "core:window:allow-set-size",
+    "core:window:allow-center",
+    "core:webview:allow-create-webview-window",
+    "dialog:default",
+    "dialog:allow-open",
+    "store:default",
+    "opener:default",
+    "fs:default",
+    "fs:allow-home-read-recursive",
+    "notification:default",
+    "notification:allow-notify",
+    "notification:allow-request-permission",
+    "notification:allow-is-permission-granted",
+    {
+      "identifier": "http:default",
+      "allow": [
+        { "url": "https://*.garmin.com/**" },
+        { "url": "https://*.garmin.cn/**" },
+        { "url": "https://thegarth.s3.amazonaws.com/**" }
+      ]
+    }
+  ]
+}
